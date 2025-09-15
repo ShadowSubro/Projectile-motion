@@ -1,91 +1,72 @@
-# Projectile Motion Simulator
+# 🚀 Space Trajectory Simulator
 
-Welcome to the **Projectile Motion Simulator**! This repository provides a simple yet powerful tool to simulate and visualize the motion of projectiles under various conditions. It's designed to help students, educators, and enthusiasts understand the physics of projectile motion through interactive simulations and easy-to-read code.
+A desktop application to simulate **projectile motion in space
+environments**.\
+Built with **Python (Tkinter + Matplotlib)** and packaged as a
+standalone executable using **PyInstaller**.
 
-## Features
+## 📂 Project Structure
 
-- 🧮 **Accurate Physics Simulation:** Models projectile motion with customizable parameters (initial velocity, angle, gravity, etc.).
-- 📊 **Graphical Visualization:** Plots trajectories in real-time for better understanding.
-- 🛠️ **User Input:** Easily adjust variables to see how they affect the path.
-- 💡 **Educational:** Clean code and comments for learning and experimentation.
+    ├── dist/
+    │   └── main.exe        # Executable file (ready to run, no Python required)
+    ├── main.py             # Source code (Tkinter + Matplotlib)
+    ├── main.spec           # PyInstaller build spec
+    ├── .gitattributes
+    └── README.md
 
-## Getting Started
+## ✨ Features
 
-### Prerequisites
+-   Input **velocity, angle, gravity, and initial height**\
+-   Predefined gravity for **Earth 🌍, Moon 🌕, and Mars ♂️**\
+-   Displays:
+    -   🕒 Time of flight\
+    -   🔼 Maximum height\
+    -   ➡ Horizontal range\
+-   Interactive **trajectory plot** (with max height and landing point
+    markers)\
+-   Modern **dark-space GUI theme**
 
-- Python 3.x
-- Required libraries (see [Installation](#installation))
+## ▶️ How to Run
 
-### Installation
+### Option 1: Run the EXE (no Python required)
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/ShadowSubro/Projectile-motion.git
-   cd Projectile-motion
-   ```
+1.  Go to the `dist` folder.\
+2.  Double-click **`main.exe`** to launch the simulator.
 
-2. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-   *(If there is no `requirements.txt`, typical dependencies include `matplotlib` and `numpy`)*
+### Option 2: Run from Source (requires Python)
 
-### Usage
+1.  Install dependencies:
 
-Run the main script to start the simulation:
+    ``` bash
+    pip install matplotlib
+    ```
 
-```bash
-python main.py
+    *(Tkinter is included with standard Python installations)*
+
+2.  Run the app:
+
+    ``` bash
+    python main.py
+    ```
+
+## 🖼 Preview
+
+The app opens a **GUI window** with: - Input panel (velocity, angle,
+gravity, height, planet selector)\
+- Results panel\
+- Live matplotlib trajectory plot
+
+## 🛠 Build Instructions (for developers)
+
+To rebuild the executable with PyInstaller:
+
+``` bash
+pip install pyinstaller
+pyinstaller --onefile --noconsole main.py
 ```
 
-You will be prompted (or can edit the script) to enter:
-- Initial velocity
-- Launch angle
-- Height
-- Gravity
+This generates `dist/main.exe`.
 
-The program will then calculate and display the projectile's trajectory.
+## 📜 License
 
-## Example
-
-![Projectile Motion Example](assets/trajectory_example.png)
-
-*The above image demonstrates a typical trajectory for a projectile launched at 45° from ground level.*
-
-## Project Structure
-
-```
-Projectile-motion/
-├── main.py
-├── utils.py
-├── README.md
-├── requirements.txt
-└── assets/
-    └── trajectory_example.png
-```
-
-- **main.py:** Entry point for the simulation.
-- **utils.py:** Helper functions for calculations.
-- **assets/**: Images and other resources.
-
-## Contributing
-
-Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
-
-1. Fork the repository.
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -am 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## License
-
-[MIT](LICENSE)
-
-## Author
-
-- **ShadowSubro** - [GitHub Profile](https://github.com/ShadowSubro)
-
----
-
-Feel free to use, modify, and share this project. Happy simulating!
+This project is for **educational purposes** and free to use.
